@@ -1,11 +1,12 @@
 'use strict';
+let time = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'];
 
 let seattle = {
   name : 'Seattle',
   min : 23,
   max : 65,
   avg : 6.3,
-  time : ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'],
+
   getCusNum : function() {
 
 
@@ -30,10 +31,10 @@ let seattle = {
     articleElement.appendChild(ulElement);
 
     let sum = 0;
-    for (let i = 0; i < this.time.length; i++) {
+    for (let i = 0; i < time.length; i++) {
       let liElement = document.createElement('li');
       let cookies = this.getCusNum();
-      liElement.textContent = this.time[i] + ': ' + cookies + ' cookies';
+      liElement.textContent = time[i] + ': ' + cookies + ' cookies';
       ulElement.appendChild(liElement);
       sum = sum + cookies;
       if (i===13){
