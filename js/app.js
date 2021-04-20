@@ -1,9 +1,20 @@
 'use strict';
+let time = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'];
+
+
+let seattle = {
+  name : 'Seattle',
+  min : 23,
+  max : 65,
+  avg : 6.3,
+
+  getCusNum : function() {
 
 let totalHourly = [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 let totalSum=0;
 let time = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'];
 function Salmon (name , min , max , avg , customr ){
+
 
 
   this.name=name;
@@ -25,10 +36,24 @@ Salmon.prototype.getCusNum = function(){
 
   for(let i = 0 ; i<time.length ; i++){
 
+
+    let sum = 0;
+    for (let i = 0; i < time.length; i++) {
+      let liElement = document.createElement('li');
+      let cookies = this.getCusNum();
+      liElement.textContent = time[i] + ': ' + cookies + ' cookies';
+      ulElement.appendChild(liElement);
+      sum = sum + cookies;
+      if (i===13){
+        let liElement=document.createElement('li');
+        liElement.textContent='total: ' + sum + ' cookies';
+        ulElement.appendChild(liElement);
+=======
     let customrNum= Math.ceil(getRandomInt(this.min,this.max)*this.avg);
     this.sum=this.sum+customrNum;
     this.customr.push(customrNum);
     totalHourly[i]=totalHourly[i]+customrNum;
+
 
 
   }
