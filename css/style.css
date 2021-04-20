@@ -1,0 +1,64 @@
+table {
+    border-collapse: collapse;
+    text-align: center;
+  }
+  
+  td, th ,tr {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+  }
+
+  tr:nth-child(1) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    background-color: #4CAF50;
+    color: rgb(250, 245, 245);
+  }
+
+  tr:nth-child(2n+2) {
+
+    background-color: #e4dede;
+  }
+
+  tr:hover {
+      background-color: rgb(226, 180, 180);
+
+  }
+
+  h1{
+color:#ca8a8b;
+font-weight: bold;
+
+  }
+  .welcome{
+    text-align: center;
+  }
+
+  a{
+      text-decoration: none;
+      margin-left: 10px;
+
+      
+  }
+  div.slides {
+    width: 640px;
+    height: 480px;
+    font-size: 0;
+}
+
+nav a:nth-child(1) {
+  
+  position: relative;
+  left: 700px;
+}
+
+
+nav a:nth-child(2) {
+  
+  position: relative;
+  left: 720px;
+}
+
+
+

@@ -92,7 +92,7 @@ Salmon.prototype.render = function(){
 function footerRow (){
   let tRow2 = document.createElement('tr');
   table.appendChild(tRow2);
-  let tfooter = document.createElement('tfoot');
+  let tfooter = document.createElement('td');
   tRow2.appendChild(tfooter);
   tfooter.textContent = 'Totals';
 
