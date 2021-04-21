@@ -2,6 +2,7 @@
 
 let totalHourly = [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 let totalSum=0;
+let arrayl=[];
 let time = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'];
 function Salmon (name , min , max , avg , customr ){
 
@@ -12,6 +13,8 @@ function Salmon (name , min , max , avg , customr ){
   this.avg = avg;
   this.customr =customr;
   this.sum = 0;
+  arrayl.push(this);
+
 
 
 
@@ -44,10 +47,14 @@ parentElement.appendChild(articleElement);
 let table = document.createElement('table');
 articleElement.appendChild(table);
 
-let tRow = document.createElement('tr');
-table.appendChild(tRow);
+
 // function for the header row just.
 function headerRow (){
+
+  let header =document.createElement('thead');
+  table.appendChild(header);
+  let tRow = document.createElement('tr');
+  header.appendChild(tRow);
 
   let thedaer =document.createElement('th');
   tRow.appendChild(thedaer);
@@ -95,7 +102,7 @@ function footerRow (){
   let tfooter = document.createElement('td');
   tRow2.appendChild(tfooter);
   tfooter.textContent = 'Totals';
-
+  totalSum = 0;
   for (let z = 0 ; z<time.length ; z++){
     let tBody1 = document.createElement('td');
     tRow2.appendChild(tBody1);
@@ -145,12 +152,45 @@ paris.render();
 console.log(lima);
 lima.getCusNum();
 lima.render();
+
+
 footerRow();
 
 
 
+const branchForm = document.getElementById('branchForm');
+
+branchForm.addEventListener('submit',addNewBranch);
+
+function addNewBranch(event){
+  event.preventDefault();
+
+  console.log(event.target.newBranch.value);
+  let newBranch = event.target.newBranch.value;
+  let minCust = event.target.minCus.value;
+  let maxCust = event.target.maxCus.value;
+  let avgCooki = event.target.avgCook.value;
+
+  table.innerHTML='';
+  headerRow();
+
+  for(let i=0; i<arrayl.length; i++ ){
+
+    arrayl[i].render();
+
+  }
 
 
+  let newSalmonBranch = new Salmon ( newBranch,minCust,maxCust,avgCooki,[]);
+
+
+
+  newSalmonBranch.getCusNum();
+  newSalmonBranch.render();
+  footerRow();
+
+  console.log(newBranch);
+}
 
 
 
