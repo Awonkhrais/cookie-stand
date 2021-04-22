@@ -1,11 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
 table {
     border-collapse: collapse;
     text-align: center;
+  
+    
+    
   }
   
   td, th ,tr {
     border: 1px solid #ccc;
     padding: 5px 10px;
+    color: #933c9e;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
   }
 
   tr:nth-child(1) {
@@ -18,7 +27,7 @@ table {
 
   tr:nth-child(2n+2) {
 
-    background-color: #e4dede;
+    background-color: #e3e7e7;
   }
 
   tr:hover {
@@ -28,11 +37,12 @@ table {
 
   h1{
 color:#ca8a8b;
-font-weight: bold;
+font-family: 'Open Sans', sans-serif;
 
   }
   .welcome{
     text-align: center;
+    font-family: 'Open Sans', sans-serif;
   }
 
   a{
@@ -61,4 +71,41 @@ nav a:nth-child(2) {
 }
 
 
+
+#branchForm{
+
+  font-family:Georgia;
+}
+
+.class{
+  font-family:Georgia;
+
+}
+button{
+  font-family:Georgia;
+
+}
+
+main h2 {
+  font-family: 'Zen Dots', cursive;
+  color: black;
+
+}
+
+
+main h3 {
+
+  font-family: 'Zen Dots', cursive;
+  color: black;
+}
+
+main li {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #14ad1b;
+}
+
+.container{
+
+  background-color: #edffa9;
+}
 
