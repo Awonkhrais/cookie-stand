@@ -4,31 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sales Data</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
 
+
+<body>
     <header>
 
+        <h1>Sales Data of Pat's Salmon cookies</h1>
+        <a href="./index.html">HOME</a>
 
 
     </header>
 
 
+
     <main>
+        <div id="SalmonCookies"></div>
 
-        <section id="salmon"></section>
+        <fieldset class="field">  
+            <legend>Add New Branch</legend>
+            
+            <form id = "branchForm">
 
+
+            <label for="newBranch">Location Name</label>
+            <input  id ="newBranch" type="text">
+            <label for="minCus">Minimum Customers per hour</label>
+            <input  id ="minCus" type="text">
+            <label for="maxCus">Maximum Customers per hour</label>
+            <input  id ="maxCus" type="text">
+            <label for="avgCook">Average Cookies</label>
+            <input  id ="avgCook" type="text">
+            <button type="submit" > add new branch now </button>
+            
+
+        </form> 
+    </fieldset>
+      
 
     </main>
 
 
-    <footer></footer>
+
+    <footer>
 
 
-    
+    </footer>
 
-
-    <script src="/js/app.js"></script>
+    <script src="./js/app.js"></script>
 </body>
+
+
 </html>
